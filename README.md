@@ -8,12 +8,29 @@ In this project we have implemented following models:
 3. Tree Structure LSTM with Attention Mechanism.
 
 
-### Requirements
+### Software Requirements
 - [PyTorch](http://pytorch.org/) Deep learning library for the implementaion of Neural Models
 - [Tensorflow](https://www.tensorflow.org/) Deep learning library by Google for the implementaion of Neural Models
 - [tqdm](https://github.com/tqdm/tqdm): display progress bar
 - Java >= 8 (for Stanford CoreNLP utilities i.e. Stanford Parsers)
 - Python >= 3
+
+### Development and Testing Environment Used
+- Operating Systems: macOS Mojave and Ubuntu 18.04
+- Processor: Intel i5 Quad Core
+- RAM: 8 GM DDR3
+
+## Usage
+First run the script `./fetch_and_preprocess.sh`
+
+This downloads the following data:
+  - [Stanford Sentiment Treebank](http://nlp.stanford.edu/sentiment/index.html) (sentiment classification task)
+  - [Glove word vectors](http://nlp.stanford.edu/projects/glove/) (Common Crawl 840B) -- **Warning:** this is a 2GB download!
+
+and the following libraries:
+
+  - [Stanford Parser](http://nlp.stanford.edu/software/lex-parser.shtml)
+  - [Stanford POS Tagger](http://nlp.stanford.edu/software/tagger.shtml)
 
 
 References:
