@@ -45,6 +45,8 @@ Important files:
 - baseline.py: Contains baseline implementation of Linear LSTM
 - sentiment.py: Main driver file to run the system. We have changed the argument processing and model generation and processing flow
 - trainer.py: This file implements training module. We have added the functionality to incorporate the trainig of the model with and without the attention mechanism.
+- model.py: This file contains implementation of all the models. We implemented attention module and changed the implementation of Tree LSTM modules to sync with our requirements.
+- config.py: This file contains configuration constants to control the nature of system. We added extra configuration parameters to this to control our system.
 ```
 
 
