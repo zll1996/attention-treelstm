@@ -40,6 +40,13 @@ For testing the implementation of Tree LSTM and Attention mechanism use the foll
 ```
 python sentiment.py --name <name_of_log_file> --model_name <constituency|dependency> --epochs 10 --attention_flag <True|False>
 ```
+Important files:
+```
+- baseline.py: Contains baseline implementation of Linear LSTM
+- sentiment.py: Main driver file to run the system. We have changed the argument processing and model generation and processing flow
+- trainer.py: This file implements training module. We have added the functionality to incorporate the trainig of the model with and without the attention mechanism.
+```
+
 
 ### References:
 
