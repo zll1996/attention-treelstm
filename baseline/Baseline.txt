@@ -1,0 +1,4 @@
+This folder contains: 
+1. Baseline Linear LSTM python file
+2. Glove embeddings
+3. Positive review file and negative review file
