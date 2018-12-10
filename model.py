@@ -279,7 +279,6 @@ class ChildSumTreeLSTM(nn.Module):
             _, child_loss = self.forward(tree.children[idx], embs, training)
             loss = loss + child_loss
         child_c, child_h = self.get_child_states(tree)
-        print("tree_indx", tree.idx)
         tree.state = self.node_forward(embs[tree.idx-1], child_c, child_h)
 
         if self.output_module != None:
@@ -423,7 +422,7 @@ class TreeLSTMSentiment(nn.Module):
         if self.attention_flag:
 
             if self.model_name == 'dependency':
-                H_combined = torch.cat(self.tree_module.composer.H, 0)
+                H_combined = torch.cat(self.tree_module.H, 0)
             elif self.model_name == 'constituency':
                 H_combined = torch.cat(self.tree_module.composer.H, 0)
 
