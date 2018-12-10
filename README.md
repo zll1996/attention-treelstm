@@ -33,7 +33,7 @@ and the following libraries:
   - [Stanford POS Tagger](http://nlp.stanford.edu/software/tagger.shtml)
 
 
-###References:
+### References:
 
 1. Code for baseline has been referenced from https://github.com/adeshpande3/LSTM-Sentiment-Analysis
 2. Code for Tree LSTM has been referenced from https://github.com/ttpro1995/TreeLSTMSentiment/
