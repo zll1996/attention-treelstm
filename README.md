@@ -10,6 +10,7 @@ In this project we have implemented following models:
 
 ### Requirements
 - [PyTorch](http://pytorch.org/) Deep learning library for the implementaion of Neural Models
+- [Tensorflow](https://www.tensorflow.org/) Deep learning library by Google for the implementaion of Neural Models
 - [tqdm](https://github.com/tqdm/tqdm): display progress bar
 - Java >= 8 (for Stanford CoreNLP utilities i.e. Stanford Parsers)
 - Python >= 3
