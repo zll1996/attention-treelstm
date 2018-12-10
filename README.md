@@ -38,7 +38,7 @@ Now to test the baseline model goto the `baseline` directory using `cd ./baselin
 For testing the implementation of Tree LSTM and Attention mechanism use the following command:
 
 ```
-python sentiment.py --name <name_of_log_file> --model_name <constituency|dependency> --epochs 10 --attention_flag <True|False>
+python3 sentiment.py --name <name_of_log_file> --model_name <constituency|dependency> --epochs 10 --attention_flag <True|False>
 ```
 Important files:
 ```
