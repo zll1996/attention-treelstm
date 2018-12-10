@@ -86,6 +86,6 @@ def print_tree(tree, level):
         indent += '| '
     line = indent + str(tree.idx)
     print (line)
-    for i in xrange(tree.num_children):
+    for i in range(tree.num_children):
         print_tree(tree.children[i], level+1)
 
