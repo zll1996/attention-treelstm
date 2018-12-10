@@ -13,7 +13,7 @@ In this project we have implemented following models:
 - [Tensorflow](https://www.tensorflow.org/) Deep learning library by Google for the implementaion of Neural Models
 - [tqdm](https://github.com/tqdm/tqdm): display progress bar
 - Java >= 8 (for Stanford CoreNLP utilities i.e. Stanford Parsers)
-- Python >= 3 for running the core system
+- Python >= 3 for running the core system and baseline
 - Python 2.7 for running preprocessing scripts
 
 ### Development and Testing Environment Used
@@ -33,7 +33,7 @@ and the following libraries:
   - [Stanford Parser](http://nlp.stanford.edu/software/lex-parser.shtml)
   - [Stanford POS Tagger](http://nlp.stanford.edu/software/tagger.shtml)
 
-Now to test the baseline model goto the `baseline` directory using `cd ./baseline` and run `python baseline.py`
+Now to test the baseline model goto the `baseline` directory using `cd ./baseline` and run `python3 baseline.py`
 
 ### References:
 
