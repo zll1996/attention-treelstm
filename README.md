@@ -19,4 +19,4 @@ In this project we have implemented following models:
 References:
 
 1. Code for baseline has been referenced from https://github.com/adeshpande3/LSTM-Sentiment-Analysis
-2. COde for Tree LSTM has been referenced from https://github.com/ttpro1995/TreeLSTMSentiment/
+2. Code for Tree LSTM has been referenced from https://github.com/ttpro1995/TreeLSTMSentiment/
