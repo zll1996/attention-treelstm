@@ -33,6 +33,7 @@ and the following libraries:
   - [Stanford Parser](http://nlp.stanford.edu/software/lex-parser.shtml)
   - [Stanford POS Tagger](http://nlp.stanford.edu/software/tagger.shtml)
 
+Now to test the baseline model goto the `baseline` directory using `cd ./baseline` and run `python baseline.py`
 
 ### References:
 
