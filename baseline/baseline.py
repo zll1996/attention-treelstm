@@ -3,7 +3,11 @@ import tensorflow as tf
 import os
 import math
 import matplotlib as plt
-
+from os import listdir
+from os.path import isfile, join
+import re
+from random import randint
+import datetime
 
 wordsList = np.load('wordsList.npy')
 print('Loaded the word list!')
@@ -12,19 +16,9 @@ wordsList = [word.decode('UTF-8') for word in wordsList] #Encode words as UTF-8
 wordVectors = np.load('wordVectors.npy')
 print ('Loaded the word vectors!')
 
-
-
-
-
 print(len(wordsList))
 print(wordVectors.shape)
 
-
-
-
-
-from os import listdir
-from os.path import isfile, join
 reviewFiles = ['pos_2.txt', 'neg_2.txt']
 numWords = []
 for f in reviewFiles:
@@ -39,19 +33,16 @@ print('The total number of files is', numFiles)
 print('The total number of words in the files is', sum(numWords))
 print('The average number of words in the files is', sum(numWords)/len(numWords))
 
-
 maxSeqLength = 40
 
-
 # Removes punctuation, parentheses, question marks, etc., and leaves only alphanumeric characters
-import re
+
 strip_special_chars = re.compile("[^A-Za-z0-9 ]+")
+
 
 def cleanSentences(string):
     string = string.lower().replace("<br />", " ")
     return re.sub(strip_special_chars, "", string.lower())
-
-
 
 
 ids = np.zeros((numFiles, maxSeqLength), dtype='int32')
@@ -78,13 +69,8 @@ for file in reviewFiles:
 
 np.save('idsMatrix', ids)
 
-
-
 ids = np.load('idsMatrix.npy')
 
-
-
-from random import randint
 
 def getTrainBatch():
     labels = []
@@ -111,18 +97,12 @@ def getTestBatch():
         arr[i] = ids[num-1:num]
     return arr, labels
 
-
-
-
-
 batchSize = 32
 lstmUnits = 64
 numClasses = 2
 iterations = 50001
 numDimensions = 300
 
-
-import tensorflow as tf
 tf.reset_default_graph()
 
 labels = tf.placeholder(tf.float32, [batchSize, numClasses])
@@ -142,17 +122,9 @@ accuracy = tf.reduce_mean(tf.cast(correctPred, tf.float32))
 loss = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits_v2(logits=prediction, labels=labels))
 optimizer = tf.train.AdamOptimizer().minimize(loss)
 
-
-
-
-import datetime
-
 tf.summary.scalar('Loss', loss)
 tf.summary.scalar('Accuracy', accuracy)
 merged = tf.summary.merge_all()
-
-
-
 
 
 sess = tf.InteractiveSession()
@@ -169,17 +141,9 @@ for i in range(iterations):
        save_path = saver.save(sess, "models/pretrained_lstm.ckpt", global_step=i)
        print("saved to %s" % save_path)
 
-
-
-
-
 sess = tf.InteractiveSession()
 saver = tf.train.Saver()
 saver.restore(sess, tf.train.latest_checkpoint('models'))
-
-
-
-
 
 iterations = 10
 acc = []
